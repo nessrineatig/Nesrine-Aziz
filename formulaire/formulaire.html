@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="formulaire.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+
+<body>
+    
+    <div id="background">
+        <div class="main">
+            <button class="home" id="Home">
+            <i class="fa fa-home"></i>
+             </button>
+        </div>
+        <br>
+        <div class="popup">
+            <span class="popup-text" id="mypopup">
+                <h2>your reservation has been registered</h2>
+                <h3>We will Contact you ASAP <br>Jawek Behi :p </h3>
+                <h4>we will redirect you to our home page</h4>
+                <h5>Thank you Bye</h5>
+            </span>
+        </div>
+        <div class="inputs">
+
+            <h1 id="form-title">Camp Form</h1>
+            <p class="input-container">
+                <input type="text" placeholder="Enter your name" name="text" id="text" class="input-field"
+                    autocomplete="name">
+                <label class="input-label" for="text">Name</label>
+            </p>
+            <br>
+            <p class="input-container">
+                <input type="text" placeholder="Enter your Lastname" name="text" id="text" class="input-field"
+                    autocomplete="name">
+                <label class="input-label" for="text">Last Name</label>
+            </p>
+            <br>
+            <p class="input-container">
+                <input type="text" placeholder="Enter your Number" name="text" id="text" class="input-field"
+                    autocomplete="name">
+                <label class="input-label" for="text">Number</label>
+            </p>
+            <br>
+            <p class="input-container">
+                <input type="text" placeholder="How many Campers ?" name="text" id="text" class="input-field"
+                    autocomplete="name">
+                <label class="input-label" for="text">How many Campers</label>
+            </p>
+            <br>
+            <div>
+                <p>Where are you planning to go ? </p>
+                <div>
+                    <ul class="check-button">
+                        <div class="opt-container">
+                            <li class="options">Il Sogno Camp </li> <input type="radio" name="test">
+                        </div>
+                        <div class="opt-container">
+                            <li class="options">Bouhertma Camp </li> <input type="radio" name="test">
+                        </div>
+                        <div class="opt-container">
+                            <li class="options">Bni Mtir Outdoors </li> <input type="radio" name="test">
+                        </div>
+                        <div class="opt-container">
+                            <li class="options">Zen Camp </li> <input type="radio" name="test">
+                        </div>
+                        <div class="opt-container">
+                            <li class="options">Ain Soltan</li><input type="radio" name="test">
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <p>You dont have equipement ?! <input class="button " type="checkbox"> <br>No worries just click on the
+                checkbox
+                above so that we provide you with what you need </p>
+            <div class="items">
+                <div class="item-container">
+                    <label for="tentes">Tentes</label>
+                    <div class="qp">
+                        <input type="number" id="tent-quantity" class="equip-quantity" min="0">
+                        <p id="tent-price">15dt</p>
+                    </div>
+                </div>
+                <br>
+                <div class="item-container">
+                    <label for="sleepingBag">Sleeping Bag</label>
+                    <div class="qp">
+                        <input type="number" id="sleepingBag-quantity" class="equip-quantity" min="0">
+                        <p id="sleepingBag-price">10dt</p>
+                    </div>
+                </div>
+                <br>
+                <div class="item-container">
+                    <label for="mattress">Mattress</label>
+                    <div class="qp">
+                        <input type="number" id="mattress-quantity" class="equip-quantity" min="0">
+                        <p id="mattress-price">5dt</p>
+                    </div>
+                </div>
+                <br><br>
+                <span id="total-price">Your Total: 0.00DT</span>
+
+
+            </div>
+            <br>
+            <button class="btn">Book Now</button>
+        </div>
+    </div>
+    <iframe id="gif"src="https://giphy.com/embed/fuE7c5JK4zDSY34DTe" width="480" height="270" frameBorder="0"
+        class="giphy-embed" allowFullScreen></iframe>
+    <div class="footer">
+        <br><br><br><br>
+        <footer class="about-us">
+            <h2> About us</h2>
+            <p>we are here to ensure your safety and make you enjoy your experience</p>
+            <h2>Contact us</h2>
+            <p> +21673214214</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="./form.js"></script>
+</body>
+
+
+</html>

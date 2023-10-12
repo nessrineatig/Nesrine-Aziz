@@ -1,0 +1,332 @@
+.input-container {
+    --c-text: rgb(50, 50, 80);
+    --c-bg: rgb(252, 252, 252);
+    --c-outline: rgb(55, 45, 190);
+    display: grid;
+    gap: 1ch;
+    position: relative;
+    max-width: 190px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.input-field {
+    padding: 0.5em 0.75em;
+    border-radius: 0.2em;
+    border: 1px solid var(--c-border, currentColor);
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 0.1ch;
+    width: 100%;
+}
+
+.input-field:not(:placeholder-shown)+.input-label {
+    transform: translateY(-220%);
+    opacity: 1;
+}
+
+.input-field:invalid {
+    --c-border: rgb(230, 85, 60);
+    --c-text: rgb(230, 85, 60);
+    --c-outline: rgb(230, 85, 60);
+}
+
+.input-field:is(:disabled, :read-only) {
+    --c-border: rgb(150, 150, 150);
+    --c-text: rgb(170, 170, 170);
+}
+
+.input-field:is(:focus, :focus-visible) {
+    outline: 2px solid var(--c-outline);
+    outline-offset: 2px;
+}
+
+.input-label {
+    --timing: 200ms ease-in;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transition: transform var(--timing),
+        opacity var(--timing);
+    transform: translateY(-50%);
+    opacity: 0;
+    color: var(--c-text);
+    font-weight: 500;
+}
+
+/* .inputs {
+    
+    width: 500px;
+    margin: auto;
+    border: solid 1px rgba(63, 58, 156, 0.085);
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+} */
+.inputs {
+    width: 500px;
+    margin: 0 auto; /* Center horizontally */
+    border: 1px solid rgba(63, 58, 156, 0.085);
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center the content inside */
+}
+.btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+.btn::after,
+.btn::before {
+    content: '';
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+
+.btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn:hover {
+    color: var(--color2);
+}
+
+.btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* .items {
+    border: solid 1px rgba(63, 58, 156, 0.085);
+    display: none;
+    background-color:  aliceblue; 
+     
+    color: black;
+    border-radius: 20px;
+} */
+.items {
+    border: 1px solid rgba(63, 58, 156, 0.085);
+    background-color: aliceblue;
+    color: black;
+    border-radius: 20px;
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center the content inside */
+}
+
+.items.active{
+    display: block;
+}
+
+.items input {
+    width: 40px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.items.groove {
+    border-style: groove;
+
+}
+.item-container {
+    display: flex;
+   justify-content: space-around;
+    gap: 5px;
+    align-items: center;
+    
+}
+.item-container label{
+    margin: 0;
+}
+.item-price {
+    color: var(--c-text);
+    font-weight: 500;
+}
+.qp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    background-image: url(/Nesrine-Aziz/mainpage/images/background.jpg);
+    width: 100%;
+}
+.giphy-embed{
+    align-items: center;
+    margin-left: 100px;
+    position: relative;
+    top: 100px;
+    left: 600px;
+    margin-bottom: 100px;
+    
+}
+
+.check-btn li{
+ display: flex;
+ align-items: center;
+ gap: 10px;
+}
+.options{
+    width:  150px
+}
+
+.opt-container{
+    display: flex;
+}
+#form-title{
+    font-style: italic;
+    text-align: center;
+}
+
+.about-us {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: grey;
+    color: white;
+    padding: 3px;
+    height: 200px;
+}
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: black(255, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.popup-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.popup-text h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popup-text h5 {
+    font-size: 14px;
+}
+ .button{
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+ }
+ .button::after,
+ .button::before {
+    content: '';
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+}
+.button::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.button:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+.button:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+
+.button:hover {
+    color: var(--color2);
+}
+
+.button:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+#gif {
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center the content inside */
+}
+.home{
+    background-color: white;
+    border: none;
+    color: grey;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.home:hover{
+    background-color: lightgray;
+}
