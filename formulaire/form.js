@@ -40,4 +40,3 @@ $(".btn").on("click",function () {
       },7000)})
 
 
-

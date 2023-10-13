@@ -78,9 +78,10 @@ YouCamp.addCenter("Bouhertma",'Jendouba','"The Bouhertma Outdoors Ecological Cen
   <div class = 'center' id = 'center${id}'>
   <h2 class = 'name' id = 'name${id}'>${center.name}</h2>
   <div class = "img-container"><img class = "image" id = 'image${id}' src='${center.images[0]}' alt = '${center.images[1]}' /> </div>
+  <p class="city" id = "city${id}">${center.city}</p>
   <p class = "descr" id = "descr${id}">${center.description}</p>
   <p class ='price' id='price${id}'>${center.price} Dt</p>
-  <p class = "rating" id = "rating${id}" >${starRating} Stars</p>
+  <p class = "rating" id = "rating${id}" >${starRating}<small class = "joke">3lik amen allah</small></p>
   <p class="comments" id="comments${id}"></p>
   <input placeholder="add comment" id="commentInput${id}">
   <button class="add-comment" id="addComment${id}">Submit</button>
@@ -104,8 +105,16 @@ YouCamp.displayCenters();
 
 
 /** Image toggle */
-
-$(".image").on('click',function () {
+// this was why it didnt want to toggle when we searched !! big mistake 
+// $(".image").on('click',function () {
+//   var id = this.id;
+//   var src = this.src;
+//   var alt = this.alt;
+//   $(`#${id}`).attr("src", alt);
+//   $(`#${id}`).attr("class", "image");
+//   $(`#${id}`).attr("alt", src);
+// });
+$("#CENTERS").on('click', '.image', function () {
   var id = this.id;
   var src = this.src;
   var alt = this.alt;
@@ -113,12 +122,22 @@ $(".image").on('click',function () {
   $(`#${id}`).attr("class", "image");
   $(`#${id}`).attr("alt", src);
 });
-
- //$(`#image${0}`).on("click", toggle);
+ 
 
 
 // add comment function
-$(".add-comment").on('click', function () {
+// $(".add-comment").on('click', function () {
+//   var id = this.id.replace('addComment', ''); 
+//   var commentInput = $("#commentInput" + id);
+//   var commentText = commentInput.val();
+
+//   if (commentText) {
+//     var commentContainer = $("#comments" + id);
+//     commentContainer.append('<p>' + 'iyed:' + " " + commentText + '</p>');
+//     commentInput.val(''); 
+//   }
+// });
+$("#CENTERS").on('click', '.add-comment', function () {
   var id = this.id.replace('addComment', ''); 
   var commentInput = $("#commentInput" + id);
   var commentText = commentInput.val();
@@ -133,12 +152,11 @@ $(".add-comment").on('click', function () {
 
 
 
-
 $("#cts").on("click", function () {
   var value = $("#search").val();
   
   var filtered = YouCamp.list.filter(function (center) {
-    return center.name.toLowerCase().includes(value.toLowerCase());
+    return center.name.toLowerCase().includes(value.toLowerCase())|| center.city.toLowerCase().includes(value.toLowerCase());
   })
   $("#CENTERS").empty();
   filtered.forEach(function (center) {

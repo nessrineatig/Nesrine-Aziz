@@ -114,3 +114,9 @@ footer {
  color: white;
  margin: 0 auto;
 }
+
+.joke{
+    font-size:small;
+    font-style: italic;
+    font-family: Amita;
+}
