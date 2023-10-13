@@ -1,9 +1,5 @@
 let button = document.getElementsByClassName("button")[0]
 let items = document.getElementsByClassName("items")[0]
-button.addEventListener("click", e => {
-    items.classList.toggle("active")
-})
-
 
 var tentQuantityInput = document.getElementById("tent-quantity")
 var sleepingBagQuantityInput = document.getElementById("sleepingBag-quantity")
@@ -34,9 +30,16 @@ $("#Home").on('click', function () {
 $(".btn").on("click",function () {
     console.log("clicked")
     $(".popup").css("display","block")
+    // $(".popup").css("background-color","aqua")
+    $(".popup").css("background-color","#1d3849")
+    $('#gif').hide()
+    $('footer').hide()
     $(".inputs").hide()
     setTimeout(function () {
         window.location.href = "/Nesrine-Aziz/mainpage/youcamp.html";
       },7000)})
 
-
+      $('.items').hide()
+$('.button').click(function(){
+    $('.items').toggle("active")
+})

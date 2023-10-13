@@ -312,12 +312,13 @@ body{
 .button:active {
     filter: brightness(.7);
     transform: scale(.98);
+    color: aqua;
 }
 
 #gif {
-    display: block;
-    margin: 0 auto; /* Center horizontally */
-    text-align: center; /* Center the content inside */
+    position: relative;
+    top: 100px;
+   left: 420px;
 }
 .home{
     background-color: white;
@@ -330,3 +331,31 @@ body{
 .home:hover{
     background-color: lightgray;
 }
+
+#title1{
+    color: white;
+   text-align: center;
+    font-family: Amita;
+   /* padding-bottom: ; */
+   margin:2px auto;
+}
+/* .head .myhead .home{
+    width: 40px;
+    height: 40px;
+} */
+/* .head .myhead{
+    color: white;
+ margin: 0 auto;
+} */
+
+/* .head .main .home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+header{
+    display: flex;
+    align-items: center;
+   
+}
+

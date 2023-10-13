@@ -168,3 +168,7 @@ $("#cts").on("click", function () {
 $("#book").on('click', function () {
   window.location.href = "/Nesrine-Aziz/formulaire/formulaire.html";
 });
+$("#Home").on('click', function () {
+
+  window.location.href = "/Nesrine-Aziz/mainpage/youcamp.html";
+});
